@@ -64,6 +64,7 @@ async function getRepository(input) {
             searchedRepository.classList.add('added-element');
             addedSearch.append(searchedRepository);
             suggestionsListArray = [];
+            search.value = '';
           }
         }
       });
@@ -75,7 +76,7 @@ async function getRepository(input) {
 
 addedSearch.addEventListener('click', (e) => {
   if (e.target.className == 'close-button') {
-    (e.target.closest('.added-element')).remove();
+    e.target.closest('.added-element').remove();
   }
 });
 

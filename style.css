@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+  width: 661px;
+  height: 763px;
+  background-color: #c4c4c4;
+  margin: 62px;
+  overflow-y: hidden;
+  position: relative;
+}
+
+.search {
+  padding-left: 13px;
+  margin: 62px 84px 0 77px;
+  width: 500px;
+  height: 61px;
+  font-size: 48px;
+  font-weight: 400;
+  border: none;
+}
+
+.search-suggestions div {
+  padding-left: 13px;
+  margin-left: 77px;
+  font-size: 30px;
+  width: 500px;
+  height: 44px;
+  background-color: #e3e3e3;
+  border: 2px solid #000000;
+  cursor: default;
+  position: relative;
+  z-index: 1;
+}
+
+.search-suggestions div:hover {
+  background-color: #65cdf9;
+}
+
+.added-repository {
+  position: absolute;
+  top: 150px;
+  z-index: 0;
+}
+
+.added-repository > div {
+  padding: 6px 17px 8px 16px;
+  font-size: 24px;
+  margin: 0px 84px 0px 77px;
+  width: 500px;
+  height: 101px;
+  background-color: #e27beb;
+  border: 1px solid #000000;
+  position: relative;
+}
+
+.close-button {
+  position: relative;
+  width: 46px;
+  height: 42px;
+  bottom: 65px;
+  left: 404px;
+  border: none;
+  background: url('images/decorate/close.png') no-repeat;
+}
+
+.hidden {
+  display: none;
+}

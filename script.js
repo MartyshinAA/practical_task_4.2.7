@@ -2,7 +2,7 @@
 
 const search = document.querySelector('.search');
 const suggestionsList = document.querySelector('.search-suggestions');
-const addedSearch = document.querySelector('.added-repository');
+const addedRepository = document.querySelector('.added-repository');
 let suggestionsListArray = [];
 
 // Отправляем конечный запрос пользователя на сервер
@@ -62,7 +62,7 @@ async function getRepository(input) {
                                             Stars: ${repository.Stars}
                                             <div class="close-button"></div>`;
             searchedRepository.classList.add('added-element');
-            addedSearch.append(searchedRepository);
+            addedRepository.append(searchedRepository);
             suggestionsListArray = [];
             search.value = '';
           }
@@ -74,7 +74,7 @@ async function getRepository(input) {
 
 // Удаляем добавленный элемент кликом по крестику
 
-addedSearch.addEventListener('click', (e) => {
+addedRepository.addEventListener('click', (e) => {
   if (e.target.className == 'close-button') {
     e.target.closest('.added-element').remove();
   }
@@ -83,7 +83,7 @@ addedSearch.addEventListener('click', (e) => {
 // Закрываем список поиска кликом вне области этого списка
 
 document.addEventListener('click', (e) => {
-  const clickIntoSearchSuggestions = e.composedPath().includes(addedSearch);
+  const clickIntoSearchSuggestions = e.composedPath().includes(addedRepository);
   if (!clickIntoSearchSuggestions) {
     suggestionsList.innerHTML = '';
   }

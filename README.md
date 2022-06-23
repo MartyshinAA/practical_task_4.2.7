@@ -1,6 +1,9 @@
 # practical_task_4.3.9
 
-Ответ на GET request: https://kata.academy:8021/api/user
+Выбрал заголовок в Postman -> Authorization -> Type: Bearer Token.
+Ответ на GET request: https://kata.academy:8021/api/user:
+
+200 OK
 
 {
     "user": {

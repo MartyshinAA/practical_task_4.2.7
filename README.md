@@ -1,5 +1,6 @@
 # practical_task_4.3.9
 
+После POST https://kata.academy:8021/api/users и POST https://kata.academy:8021/api/users/login. 
 Выбрал заголовок в Postman -> Authorization -> Type: Bearer Token.
 Ответ на GET request: https://kata.academy:8021/api/user:
 
